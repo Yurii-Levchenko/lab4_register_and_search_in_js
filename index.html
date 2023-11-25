@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 4</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .task-title {
+            margin-top: 50px;
+        }
+
+        #orderList {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        #orderList tr:first-child td {
+            font-weight: 700;
+            background-color: #f2f2f2;
+            font-size: 23px;
+
+        }
+
+        #orderList tr>td:last-child {
+            max-width: 150px;
+        }
+
+        #orderList tr>td {
+            padding: 5px 10px;
+        }
+
+        #orderList tr:nth-child(2)>td {
+            background-color: #f2f2f2;
+            font-weight: 700;
+        }
+    </style>
+
+
+
+    <form method="POST" id="orderForm">
+
+        <table border="1">
+
+            <tr>
+                <td colspan="2" align="center"> <b>Pizza shop 2.0</b> </td>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" size="20" name="name" required></td>
+            </tr>
+
+            <tr>
+                <td>Pizza Topping</td>
+                <td>
+                    <input type="radio" name="topping" id="Supreme" value="Supreme">
+                    <label for="Supreme">Supreme</label>
+                    <br><input type="radio" name="topping" id="Vegetarian" value="Vegetarian">
+                    <label for="Vegetarian">Vegetarian</label>
+                    <br><input type="radio" name="topping" id="Hawaiian" value="Hawaiian">
+                    <label for="Hawaiian">Hawaiian</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                    <select name="sauce" size=1>
+                        <option value="Tomato" selected>Tomato</option>
+                        <option value="Cream sauce">Сream sauce</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Optional Extras</td>
+                <td>
+                    <input type="checkbox" value="Extra Cheese" id="c1" name="extra1">
+                    <label for="c1">Extra Cheese</label>
+                    <input type="checkbox" value="Gluten Free Base" id="c2" name="extra2">
+                    <label for="c2">Gluten Free Base</label>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Delivery Instructions:
+                    <br>
+                    <textarea rows="5" cols="50" required name="instructions"></textarea>
+                    <br>
+
+                    <input type="Submit" value="Send my Order">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+    <br>
+    <table id="orderList" border="1">
+        <tbody>
+            <tr>
+                <td colspan="6" align="center">Order list</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Pizza Topping</td>
+                <td>Pizza Sauce</td>
+                <td>Optional Extras</td>
+                <td>Delivery Instructions</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="task-title">Task 2</h2>
+
+    <form id="dictionaryForm">
+        <input type="text" id="wordInput" placeholder="Enter a word">
+        <button>Search</button>
+    </form>
+    <div id="result"></div>
+
+    <!-- підключення скрипта -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
